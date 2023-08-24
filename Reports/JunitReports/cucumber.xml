@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="0.121" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Test the login functionality of OrangeHRM" name="Test the valid Login" time="0.01">
+<system-out><![CDATA[
+Given user is on loginPage..................................................passed
+When user enters username and password......................................passed
+And click on Login button...................................................passed
+Then user should land on home page..........................................passed
+]]></system-out>
+</testcase>
+</testsuite>
