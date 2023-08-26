@@ -21,7 +21,7 @@ monochrome=true,
 /* If you want to generate all formats at the same time then use below type */
 
 
-// plugin= {"html:Reports/HTMLReports/Cucumber.html", "json:Reports/JsonReports/cucumber.json", "junit:Reports/JunitReports/cucumber.xml"}, 
+plugin= {"html:Reports/HTMLReports/Cucumber.html", "json:Reports/JsonReports/cucumber.json", "junit:Reports/JunitReports/cucumber.xml"}, 
 
            /* HTMLReports, JunitReports, JSON Reports are folders */
 

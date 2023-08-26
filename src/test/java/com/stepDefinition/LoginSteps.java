@@ -28,20 +28,56 @@ public class LoginSteps {
 		Thread.sleep(1000);
 	}
 
-	@When("user enters username and password")
-	public void user_enters_username_and_password() throws InterruptedException {
+// Way-1 to pass parameters
+	/*
+	 * @When("user enters username and password") public void
+	 * user_enters_username_and_password() throws InterruptedException {
+	 * 
+	 * System.out.println("Step 2: User entered Credentials successfully");
+	 * 
+	 * driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
+	 * 
+	 * driver.findElement(By.xpath("//input[@type='password']")).sendKeys("admin123");
+	 * 
+	 * Thread.sleep(1000); }
+	 */
+
+//Way-2 Parameterization- Passing value through Feature file and making changes in Step Definition file
+	
+	/* 
+	 
+	 @When("^user enters \"(.*)\" and \"(.*)\"$") //Entering Regular expression
+	
+	public void user_enters_username_and_password(String uname, String pswd) throws InterruptedException {
 		
 		System.out.println("Step 2: User entered Credentials successfully");
 		
-		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
+		driver.findElement(By.xpath("//input[@name='username']")).sendKeys(uname);
 		
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("admin123");
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys(pswd);
 			
 		Thread.sleep(1000);
-	}
-
+		
+	} */
 	
-	  @When("click on Login button")
+//Way-3 Data Driver Testing in cucumber using scenario Outline - Passing values through Feature file
+			
+@When("^user enters(.*)and(.*)$") //Entering Regular expression
+	
+	public void user_enters_username_and_password(String uname, String pswd) throws InterruptedException {
+		
+		System.out.println("Step 2: User entered Credentials successfully");
+		
+		driver.findElement(By.xpath("//input[@name='username']")).sendKeys(uname);
+		
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys(pswd);
+			
+		Thread.sleep(1000);
+		
+	}
+	
+	
+	 @When("click on Login button")
 	  
 	  public void click_on_login_button() {
 	  
