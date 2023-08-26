@@ -26,7 +26,7 @@ plugin= {"html:Reports/HTMLReports/Cucumber.html", "json:Reports/JsonReports/cuc
            /* HTMLReports, JunitReports, JSON Reports are folders */
 
 
-//dryRun=true,
+//dryRun=true
 
 
 /* dryRun = True, then it checks all the steps have the step definition
